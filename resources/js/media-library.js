@@ -757,7 +757,9 @@
               ? (this.taxLabels.exclude || 'Not in') + ' · ' + countLabel
               : countLabel;
         }
-        this.$('.media-categories-filter-toggle').text(text);
+        this.$('.media-categories-filter-toggle')
+          .text(text)
+          .toggleClass('cloakwp-media-library-filter-active', selected.length > 0);
       },
 
       collectSelected: function () {
