@@ -245,6 +245,18 @@
   font-size: 13px;
 }
 
+/* WP 7.0+ visually hides every grid-toolbar `label` except the search label;
+   the filter panel renders inside the toolbar, so its term rows must opt out. */
+.media-frame.mode-grid .media-toolbar .media-categories-filter-panel label.media-categories-filter-row {
+  position: static;
+  width: auto;
+  height: auto;
+  margin: 4px 0;
+  padding: 0;
+  overflow: visible;
+  clip-path: none;
+}
+
 .wp-core-ui .media-categories-filter-row input[type="checkbox"] {
   margin: 1px 0 0;
   flex-shrink: 0;
